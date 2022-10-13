@@ -1,10 +1,18 @@
 [![it-works](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
 [![powered-by](https://forthebadge.com/images/badges/powered-by-black-magic.svg)](https://forthebadge.com)
 
-# GitLab-CI Docker Images
+# DockerHub Images
 
 <img src="ship.png" height="360px" align="right"/>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id massa id ex scelerisque imperdiet. Donec vel
-mattis elit. Suspendisse id felis vel urna vestibulum finibus a vel lorem. Maecenas quis ultricies leo. Donec
-condimentum blandit purus vel facilisis. Ut quis ante cursus libero convallis hendrerit et mollis ante.
+This is a monorepository containing the "recipes" (Dockerfile and other required files) of all the publicly available
+images (on [DockerHub][mzdh]) maintained and used by MZ Group.
+
+[mzdh]: https://hub.docker.com/u/mzgroup
+
+## Content
+
+| Image name | Details | Usage |
+| ---        | ---     | ---   |
+| [`dind-awscli-python`](/dind-awscli-python) | ![](https://img.shields.io/docker/v/mzgroup/dind-awscli-python?logo=docker&style=social)<br>![](https://img.shields.io/docker/pulls/mzgroup/dind-awscli-python?label=pulls&logo=docker&style=social)<br>![](https://img.shields.io/docker/image-size/mzgroup/dind-awscli-python?label=size&logo=docker&style=social) | lorem ipsum |
+| [`dind-awscli-nodejs`](/dind-awscli-nodejs) | ![](https://img.shields.io/docker/v/mzgroup/dind-awscli-nodejs?logo=docker&style=social)<br>![](https://img.shields.io/docker/pulls/mzgroup/dind-awscli-nodejs?label=pulls&logo=docker&style=social)<br>![](https://img.shields.io/docker/image-size/mzgroup/dind-awscli-nodejs?label=size&logo=docker&style=social) | lorem ipsum |
