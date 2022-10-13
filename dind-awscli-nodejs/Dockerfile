@@ -1,6 +1,7 @@
 # C compiler/development headers, python, pip and other build dependencies
 FROM docker:20.10.18-dind-alpine3.16 AS system-requirements
 RUN apk -Uuv add --no-cache \
+    "bash=5.1.16-r2" \
     "gcc=11.2.1_git20220219-r2" \
     "make=4.3-r0" \
     "groff=1.22.4-r1" \
