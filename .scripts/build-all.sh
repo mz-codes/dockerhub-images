@@ -59,7 +59,7 @@ main() {
         local dp_dir  # [d]ocker [p]roject - dir
         dp_dir="${HERE}/${docker_proj}"
         (
-            cd "$dp_dir"
+            cd "$dp_dir" || return 1
 
             local df_path  # [d]ocker[f]ile path
             df_path="${dp_dir}/Dockerfile"
