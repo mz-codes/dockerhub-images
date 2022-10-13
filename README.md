@@ -77,7 +77,7 @@ Considering a project structure that looks like this:
 ├── my-image-a
 │   └── Dockerfile
 ├── my-image-b
-│   └── Docker
+│   └── Dockerfile
 └── README.md
 
 2 directories, 3 files
