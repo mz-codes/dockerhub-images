@@ -4,7 +4,7 @@ services:
   - docker:dind
 
 before_script:
-  - pass
+  - 'true'
 
 stages:
   - QualityCheck
