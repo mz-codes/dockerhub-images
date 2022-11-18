@@ -20,20 +20,40 @@ Brief summary of what images are available and what does what:
 | ---        | ---     | ---   |
 | [`dind-awscli-python`](/dind-awscli-python) | ![][dap-ver]<br>![][dap-pulls]<br>![][dap-size] | Docker image used on Gitlab-CI pipelines to build dockerized Python applications |
 | [`dind-awscli-nodejs`](/dind-awscli-nodejs) | ![][dan-ver]<br>![][dan-pulls]<br>![][dan-size] | Docker image used on Gitlab-CI pipelines to build dockerized NodeJS applications |
+| [`atlantis-server-prebuilt`](/atlantis-server-prebuilt) | ![][asp-ver]<br>![][asp-pulls]<br>![][asp-size] | Golang compiler image containing pre-built binaries used by the Atlantis server |
 
 
 [mzdh]: https://hub.docker.com/u/mzgroup
 
-[dap-ver]: https://img.shields.io/docker/v/mzgroup/dind-awscli-python?logo=docker&style=social
+[dap-ver]: https://img.shields.io/docker/v/mzgroup/dind-awscli-python?logo=docker&sort=date&style=social
 [dap-pulls]: https://img.shields.io/docker/pulls/mzgroup/dind-awscli-python?label=pulls&logo=docker&style=social
 [dap-size]: https://img.shields.io/docker/image-size/mzgroup/dind-awscli-python?label=size&logo=docker&style=social
 
-[dan-ver]: https://img.shields.io/docker/v/mzgroup/dind-awscli-nodejs?logo=docker&style=social
+[dan-ver]: https://img.shields.io/docker/v/mzgroup/dind-awscli-nodejs?logo=docker&sort=date&style=social
 [dan-pulls]: https://img.shields.io/docker/pulls/mzgroup/dind-awscli-nodejs?label=pulls&logo=docker&style=social
 [dan-size]: https://img.shields.io/docker/image-size/mzgroup/dind-awscli-nodejs?label=size&logo=docker&style=social
 
+[asp-ver]: https://img.shields.io/docker/v/mzgroup/atlantis-server-prebuilt?logo=docker&sort=date&style=social
+[asp-pulls]: https://img.shields.io/docker/pulls/mzgroup/atlantis-server-prebuilt?label=pulls&logo=docker&style=social
+[asp-size]: https://img.shields.io/docker/image-size/mzgroup/atlantis-server-prebuilt?label=size&logo=docker&style=social
+
 
 ## Git development flow
+
+This project follows a combination of [trunk-based development][trunkb] and [CalVer versioning convention][calver].
+Changes/improvements are made via feature-branches that must be quickly be merged against the trunk (main).
+
+A delivery is made when a new tag is pushed. Tags must follow the `YYYY.MM.DD-COUNTER` convention, where `YYYY`
+represents the current year, `MM` the current month (zero padded), `DD` the current day (zero padded) and `COUNTER` an
+incremental value that starts at one.
+
+Examples of valid tags:
+ - `2022.01.02-1`
+ - `2022.10.15-1`
+ - `2022.10.15-2`
+ - `2022.10.15-3`
+ - `2023.12.25-1`
+ - `2023.12.25-9999`
 
 ```mermaid
 %%{ init: { 'theme':'default' } }%%
@@ -46,7 +66,7 @@ Brief summary of what images are available and what does what:
         commit
         checkout main
         merge feature/some-change
-        commit tag: "v0.1.0"
+        commit tag: "2022.11.18-1"
         branch feature/another-change
         checkout feature/another-change
         commit
@@ -55,13 +75,18 @@ Brief summary of what images are available and what does what:
         commit
         checkout main
         merge feature/another-change
-        commit tag: "v0.2.0"
+        commit tag: "2022.11.22-1"
 ```
+
+The diagram should be read as follows:
 
 1. A new feature branch is created from `main`;
 1. Changes are commited to the feature branch;
 1. Feature branch is merged back to `main`;
-1. A new release is created using a [semver tag](https://semver.org).
+1. A new release is created using a [CalVer tag][calver].
+
+[calver]: https://calver.org/about.html
+[trunkb]: https://trunkbaseddevelopment.com
 
 
 ## How this project works
@@ -83,7 +108,7 @@ Considering a project structure that looks like this:
 2 directories, 3 files
 ```
 
-A new git tag named `v0.1.0` would build/push two Docker images tagged `mzgroup/my-image-a:v0.1.0` and `mzgroup/my-image-b:v0.1.0`.
+A new git tag named `2022.12.01-1` would build/push two Docker images tagged `mzgroup/my-image-a:2022.12.01-1` and `mzgroup/my-image-b:2022.12.01-1`.
 
 ### Under the hood
 
