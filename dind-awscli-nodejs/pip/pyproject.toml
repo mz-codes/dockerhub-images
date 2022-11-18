@@ -6,7 +6,7 @@ authors     = ["Caian Ertl <caian.ertl@mzgroup.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-awscli = "1.25.82"
+awscli = "1.27.12"
 
 [tool.poetry.dev-dependencies]
 
