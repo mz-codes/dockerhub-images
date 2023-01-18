@@ -1,4 +1,7 @@
-image: "mzgroup/dind-awscli-python:v1.2.0"
+variables:
+  DOCKER_BUILDKIT: "1"
+
+image: "mzgroup/dind-awscli-python:2022.11.18-1"
 
 services:
   - docker:dind
