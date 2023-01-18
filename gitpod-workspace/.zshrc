@@ -137,7 +137,7 @@
 # GITPOD CONFIG {{{
 
     for i in $(ls -A $HOME/.bashrc.d/); do
-        source $HOME/.bashrc.d/$i;
+        source "$HOME/.bashrc.d/$i";
     done
 
 # }}}
