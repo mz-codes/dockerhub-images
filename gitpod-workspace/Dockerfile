@@ -6,7 +6,9 @@ FROM base AS packages
 USER root
 RUN apt-get update \
     && apt-get upgrade --yes \
-    && apt-get install --yes neovim
+    && apt-get install --yes --no-install-recommends "neovim=0.4.3*" \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 USER gitpod
 RUN brew link cmake \
@@ -32,11 +34,12 @@ RUN brew link cmake \
 
 # ===================================================================
 FROM packages AS altvers
-USER root
-RUN npm install --global yarn
-
 USER gitpod
-RUN nvm install 14 \
+SHELL ["/usr/bin/bash", "-c"]
+
+# hadolint ignore=SC1091
+RUN source "$HOME/.nvm/nvm-lazy.sh" \
+    && nvm install 14 \
     && nvm install 18 \
     && nvm install 19 \
     && pyenv install 3.9 \

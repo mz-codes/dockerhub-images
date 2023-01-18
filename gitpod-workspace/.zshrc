@@ -134,6 +134,13 @@
     alias poe="poetry run poe"
 
 # }}}
+# GITPOD CONFIG {{{
+
+    for i in $(ls -A $HOME/.bashrc.d/); do
+        source $HOME/.bashrc.d/$i;
+    done
+
+# }}}
 # PATH {{{
 
     CUSTOM_BIN_PATH="$HOME/bin"
