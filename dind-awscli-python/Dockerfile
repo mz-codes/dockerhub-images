@@ -1,19 +1,18 @@
-# C compiler/development headers, python, pip and other build dependencies
-FROM docker:20.10.21-dind-alpine3.16@sha256:ceacfc33f66b26b43e889d7a80c2faab212faf08e7433d59ab4a193d1da82370 AS system-requirements
+FROM docker:20.10.22-dind-alpine3.17@sha256:56a2d342dd7f25fd604f71513f765526bd522f3c256bead83b6d30c5a8006fa6 AS system-requirements
 RUN apk -Uuv add --no-cache \
-    "bash=5.1.16-r2" \
-    "gcc=11.2.1_git20220219-r2" \
-    "make=4.3-r0" \
-    "groff=1.22.4-r1" \
-    "openssh=9.0_p1-r2" \
+    "bash=5.2.15-r0" \
+    "gcc=12.2.1_git20220924-r4" \
+    "make=4.3-r1" \
+    "groff=1.22.4-r2" \
+    "openssh=9.1_p1-r1" \
     "libc-dev=0.7.2-r3" \
-    "musl-dev=1.2.3-r2" \
-    "libffi-dev=3.4.2-r1" \
-    "openssl-dev=1.1.1s-r0" \
-    "python3-dev=3.10.8-r0" \
+    "musl-dev=1.2.3-r4" \
+    "libffi-dev=3.4.4-r0" \
+    "openssl-dev=3.0.7-r2" \
+    "python3-dev=3.10.9-r1" \
     "docker-compose=1.29.2-r2" \
-    "poetry=1.1.13-r2" \
-    "py3-pip=22.1.1-r0"
+    "poetry=1.2.2-r0" \
+    "py3-pip=22.3.1-r1"
 
 
 FROM system-requirements AS pip-requirements
