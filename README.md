@@ -21,6 +21,7 @@ Brief summary of what images are available and what does what:
 | [`dind-awscli-python`](/dind-awscli-python) | ![][dap-ver]<br>![][dap-pulls]<br>![][dap-size] | Docker image used on Gitlab-CI pipelines to build dockerized Python applications |
 | [`dind-awscli-nodejs`](/dind-awscli-nodejs) | ![][dan-ver]<br>![][dan-pulls]<br>![][dan-size] | Docker image used on Gitlab-CI pipelines to build dockerized NodeJS applications |
 | [`atlantis-server-prebuilt`](/atlantis-server-prebuilt) | ![][asp-ver]<br>![][asp-pulls]<br>![][asp-size] | Golang compiler image containing pre-built binaries used by the Atlantis server |
+| [`gitpod-workspace`](/gitpod-workspace) | ![][gpw-ver]<br>![][gpw-pulls]<br>![][gpw-size] | Base image for Gitpod workspaces with custom applications and other useful configurations |
 
 
 [mzdh]: https://hub.docker.com/u/mzgroup
@@ -36,6 +37,10 @@ Brief summary of what images are available and what does what:
 [asp-ver]: https://img.shields.io/docker/v/mzgroup/atlantis-server-prebuilt?logo=docker&sort=date&style=social
 [asp-pulls]: https://img.shields.io/docker/pulls/mzgroup/atlantis-server-prebuilt?label=pulls&logo=docker&style=social
 [asp-size]: https://img.shields.io/docker/image-size/mzgroup/atlantis-server-prebuilt?label=size&logo=docker&style=social
+
+[gpw-ver]: https://img.shields.io/docker/v/mzgroup/gitpod-workspace?logo=docker&sort=date&style=social
+[gpw-pulls]: https://img.shields.io/docker/pulls/mzgroup/gitpod-workspace?label=pulls&logo=docker&style=social
+[gpw-size]: https://img.shields.io/docker/image-size/mzgroup/gitpod-workspace?label=size&logo=docker&style=social
 
 
 ## Git development flow
