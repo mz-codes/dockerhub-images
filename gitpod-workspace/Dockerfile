@@ -29,6 +29,7 @@ RUN brew link cmake \
         exa \
         mongosh \
         imagemagick \
+        dive \
         itchyny/tap/mmv
 
 
