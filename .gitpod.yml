@@ -1,0 +1,35 @@
+---
+# See: <https://www.gitpod.io/docs/configure/workspaces>
+
+
+image: mzgroup/gitpod-workspace:2023.01.19-1
+
+
+tasks:
+  - name: dind-awscli-nodejs
+    command: |
+      cd dind-awscli-nodejs
+      docker build -t dind-awscli-nodejs .
+
+  - name: dind-awscli-python
+    command: |
+      cd dind-awscli-python
+      docker build -t dind-awscli-python .
+
+  - name: atlantis-server-prebuild
+    command: |
+      cd atlantis-server-prebuild
+      docker build -t atlantis-server-prebuild .
+
+
+vscode:
+  extensions:
+    - aaron-bond.better-comments
+    - batisteo.vscode-django
+    - christian-kohler.path-intellisense
+    - eamodio.gitlens
+    - editorconfig.editorconfig
+    - exiasr.hadolint
+    - ms-azuretools.vscode-docker
+    - ms-vscode.makefile-tools
+    - redhat.vscode-yaml
