@@ -15,8 +15,6 @@ RUN brew link cmake \
     && brew update \
     && brew upgrade \
     && brew install \
-        lua \
-        luajit \
         terraform \
         terraform-docs \
         terragrunt \
@@ -28,7 +26,6 @@ RUN brew link cmake \
         bat \
         exa \
         mongosh \
-        imagemagick \
         dive \
         itchyny/tap/mmv
 
@@ -63,8 +60,10 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
         "https://github.com/zsh-users/zsh-syntax-highlighting.git" \
         "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 
+FROM altvers AS runtime
+ENV DOCKER_BUILDKIT=1
 WORKDIR /home/gitpod
-COPY .zshrc .
+COPY --chown=gitpod:gitpod .zshrc .
 
 USER root
 RUN chsh -s /usr/bin/zsh
