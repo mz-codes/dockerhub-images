@@ -1,9 +1,9 @@
-awscli==1.27.51 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:6ddfdc356a64642f19cb072a76ec39ff6c779b318d6469f62557feb5aeaadf9a \
-    --hash=sha256:e349bbaa7b580bf18ecedf14ef418572fcb0f67de5430df8d35ca9a9268ea868
-botocore==1.29.51 ; python_version >= "3.10" and python_version < "4.0" \
-    --hash=sha256:bbb92420902b4d9e4b854fcfae20d1029f1c3396e0579894f115278bc51d6198 \
-    --hash=sha256:f2f521fbd2343879f3c2d42392c88f1e7f15ea147a6dc5a3dab7b8686d90fcb6
+awscli==1.27.70 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:afd4fe503021e93923a80b9afce3192a840d05a33ca275424a7a8b887a9eb076 \
+    --hash=sha256:fcfc71f17548157c6b671be8534c9151ef9cee15dbe1a4e70ff116bd9141c8f8
+botocore==1.29.70 ; python_version >= "3.10" and python_version < "4.0" \
+    --hash=sha256:7d9abef42846c1c2f31dacaa559f8450f6fbda74c2c9e3dc6630e06e882ad026 \
+    --hash=sha256:caaa144f49ef0d01b5e8812c9afa729def2c3358d9c4d9204789be2b56c5e849
 colorama==0.4.4 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b \
     --hash=sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2
