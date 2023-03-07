@@ -13,7 +13,7 @@ RUN apk -Uuv add --no-cache \
     "docker-compose=1.29.2-r2" \
     "poetry=1.2.2-r0" \
     "py3-pip=22.3.1-r1" \
-    "nodejs=18.12.1-r0" \
+    "nodejs=18.14.2-r0" \
     "npm=9.1.2-r0" \
     "gettext=0.21.1-r1"
 
