@@ -1,0 +1,16 @@
+name: Quality checks
+
+
+on:
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  lint-dockerfiles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint Dockerfiles
+        run: bash ./.scripts/lint-all.sh
