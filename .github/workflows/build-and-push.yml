@@ -11,7 +11,7 @@ on:
 
 
 jobs:
-  quality-check:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Login to Dockerhub
