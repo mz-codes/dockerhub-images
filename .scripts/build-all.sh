@@ -2,7 +2,7 @@
 
 source ./.scripts/shared.sh
 
-FALLBACK_TAG="vX.P.T.O"
+FALLBACK_TAG="X.P.T-O"
 
 DOCKER_ACC_USERNAME="mzgroup"
 HERE=$(pwd)
@@ -65,7 +65,7 @@ main() {
             df_path="${dp_dir}/Dockerfile"
 
             local version
-            version="${CI_COMMIT_TAG:-$FALLBACK_TAG}"
+            version="${GITHUB_REF_NAME:-$FALLBACK_TAG}"
 
             if [[ -f "$df_path" ]]; then
                 check_and_build "$dp_nfs" "$version"
