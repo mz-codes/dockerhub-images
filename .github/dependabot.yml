@@ -1,0 +1,47 @@
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
+  # ===========================================================================
+
+  - package-ecosystem: docker
+    directory: /atlantis-server-prebuilt
+    schedule:
+      interval: weekly
+
+  # ===========================================================================
+
+  - package-ecosystem: docker
+    directory: /gitpod-workspace
+    schedule:
+      interval: weekly
+
+  # ===========================================================================
+
+  - package-ecosystem: docker
+    directory: /dind-awscli-nodejs
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: pip
+    directory: /dind-awscli-nodejs/pip
+    schedule:
+      interval: weekly
+
+  # ===========================================================================
+
+  - package-ecosystem: docker
+    directory: /dind-awscli-python
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: pip
+    directory: /dind-awscli-python/pip
+    schedule:
+      interval: weekly
+
+  # ===========================================================================
