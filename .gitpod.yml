@@ -16,10 +16,10 @@ tasks:
       cd dind-awscli-python
       docker build -t dind-awscli-python .
 
-  - name: atlantis-server-prebuild
+  - name: atlantis-server-prebuilt
     command: |
-      cd atlantis-server-prebuild
-      docker build -t atlantis-server-prebuild .
+      cd atlantis-server-prebuilt
+      docker build -t atlantis-server-prebuilt .
 
 
 vscode:
