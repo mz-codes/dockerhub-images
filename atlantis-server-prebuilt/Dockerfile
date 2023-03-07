@@ -1,14 +1,14 @@
 # ======================================================================================================================
-FROM golang:1.19.5-bullseye@sha256:9e953f886381789d207fc364bb3a8659f5109bc203f58e6147c768ba2c7dde0a AS go-compiler
+FROM golang:1.20.1-bullseye@sha256:b03e75040e516c6e349e27a0f64a99883728958b38e744ea0293389e3643ecbb AS go-compiler
 
 ENV TERRAFORM_GIT_URL=https://github.com/hashicorp/terraform.git
-ENV TERRAFORM_VERSION=v1.3.8
+ENV TERRAFORM_VERSION=v1.3.9
 
 ENV TERRAGRUNT_GIT_URL=https://github.com/gruntwork-io/terragrunt.git
-ENV TERRAGRUNT_VERSION=v0.43.2
+ENV TERRAGRUNT_VERSION=v0.44.4
 
 ENV ATLANTIS_GIT_URL=https://github.com/runatlantis/atlantis.git
-ENV ATLANTIS_VERSION=v0.22.3
+ENV ATLANTIS_VERSION=v0.23.2
 
 ENV INFRACOST_GIT_URL=https://github.com/infracost/infracost.git
 ENV INFRACOST_VERSION=v0.10.17
