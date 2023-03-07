@@ -1,4 +1,4 @@
-FROM docker:20.10.23-dind-alpine3.17@sha256:159779839c75eeafc7ad8b915e50459a8317c1d091cd6d4db33e92a215fc12f1 AS system-requirements
+FROM docker:23.0.1-dind-alpine3.17@sha256:3cf33ff6e893a39262bd9f6b85ff46e068fa2a98d201326e9c3058a22a21a6bb AS system-requirements
 RUN apk -Uuv add --no-cache \
     "bash=5.2.15-r0" \
     "gcc=12.2.1_git20220924-r4" \
