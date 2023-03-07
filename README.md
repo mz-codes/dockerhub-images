@@ -8,8 +8,10 @@
 This is a monorepository containing the "recipes" (Dockerfile and other required files) of all the publicly available
 images (on [DockerHub][mzdh]) maintained and used by MZ Group.
 
-
-[[_TOC_]]
+- [Content](#content)
+- [Git development flow](#git-development-flow)
+- [How this project works](#how-this-project-works)
+    - [Under the hood](#under-the-hood)
 
 
 ## Content
