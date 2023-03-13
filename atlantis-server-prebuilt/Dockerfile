@@ -1,5 +1,5 @@
 # ======================================================================================================================
-FROM golang:1.20.1-bullseye@sha256:b03e75040e516c6e349e27a0f64a99883728958b38e744ea0293389e3643ecbb AS go-compiler
+FROM golang:1.20.2-bullseye@sha256:51ff22f03320894402290ba7dfd83ee05b61e58b5381d76b40f2e3a370d81da3 AS go-compiler
 
 ENV TERRAFORM_GIT_URL=https://github.com/hashicorp/terraform.git
 ENV TERRAFORM_VERSION=v1.3.9
